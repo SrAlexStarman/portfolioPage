@@ -11,13 +11,45 @@ header {
     background-color: #000000;
     color: white;
     text-align: center;
+    width: 100%;
     padding: 1em 0;
 }
 
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Add some space between the text and the image */
+}
+
+.header-text {
+    text-align: left; /* Ensure the text is aligned to the right */
+}
+
+.header-text h1 {
+    font-size: 2.5em; /* Increase the font size of the h1 */
+    margin: 0; /* Remove default margin */
+    margin-bottom: 10px;
+}
+
+.header-text h2 {
+    margin: 0; /* Remove default margin */
+}
+
+.profile-pic {
+    width: 120px; /* Adjust the size as needed */
+    height: 120px; /* Ensure the image is square */
+    border-radius: 20px; /* Rounded corners */
+    border: 2px solid #B82601; /* Embers */ /* Border color and thickness */
+    object-fit: cover; /* Ensure the image covers the box without distorting */
+}
+
 main {
-    margin: 20px;
+    width: 80%; /* Set the width of the main element */
+    max-width: 1200px; /* Set a maximum width */
+    margin: 20px auto; /* Center the main element horizontally */
     padding: 20px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -46,6 +78,10 @@ footer {
     padding: 1em 0;
 }
 
+footer p {
+    color: #B82601; /* Embers */
+}
+
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -63,9 +99,10 @@ footer {
     color: white;
     margin: 0 10px;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 32px;
 }
 
 .social-links a:hover {
     color: #B82601; /* Embers */
 }
+
