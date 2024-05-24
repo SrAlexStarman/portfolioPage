@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #062F4F; /* Ink */
     color: white;
     text-align: center;
     padding: 1em 0;
@@ -22,13 +22,21 @@ main {
 }
 
 h1, h2 {
-    color: #333;
+    color: #000000; /* Black */
+}
+
+p {
+    color: #813772; /* Posy */
+}
+
+ul li {
+    color: #B82601; /* Embers */
 }
 
 footer {
     text-align: center;
     padding: 1em 0;
-    background-color: #4CAF50;
+    background-color: #062F4F; /* Ink */
     color: white;
     position: fixed;
     bottom: 0;
