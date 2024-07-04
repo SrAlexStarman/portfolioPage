@@ -9,33 +9,138 @@
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
-            <div class="header-text">
-                <h1>Alejandro Lopez</h1>
-                <h2>Technical Designer</h2>
+        <div class="header-container">
+            <div class="header-content">
+                <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="header-text">
+                    <h1>Alejandro Lopez</h1>
+                    <h2>Technical Designer</h2>
+                </div>
+            </div>
+            <div class="header-buttons">
+                <button onclick="switchMain()" class="btn"></button>
+                <button onclick="switchMain()" class="btn"></button>
             </div>
         </div>
     </header>
-    <main>
-        <section>
+    <main id="main1" class="active">
+        <section id="about" class="container">
             <h2>About Me</h2>
-            <p>This is a brief introduction about me.</p>
+            <div class="about-category">
+                <p>I am a passionate Technical Designer with experience in AAA game development and a strong background in programming and game design. My expertise spans across various game engines and programming languages, allowing me to bring creative visions to life through technical implementation.</p>
+            </div>
         </section>
-        <section>
-            <h2>Projects</h2>
-            <p>Here are some of my projects:</p>
-            <ul>
-                <li>Project 1</li>
-                <li>Project 2</li>
-                <li>Project 3</li>
-            </ul>
+        <section id="skills" class="container">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-code"></i> <div class="list-content"><span class="skill-item">C++</span> <span class="skill-item">C#</span><span class="skill-item">JavaScript</span></div></li>
+                        <li><i class="fas fa-gamepad"></i><div class="list-content"><span class="skill-item">Unity</span> <span class="skill-item">CryEngine</span> <span class="skill-item">Unreal</span></div></li>
+                        <li><i class="fas fa-globe"></i> <div class="list-content"><span class="skill-item">HTML</span> <span class="skill-item">CSS</span></div></li>
+                        <li><i class="fas fa-flag"></i> <div class="list-content"><span class="skill-item">Spanish</span> <span class="skill-item">English</span></div></li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-comments"></i> <span class="skill-item">Communication</span></li>
+                        <li><i class="fas fa-clock"></i> <span class="skill-item">Time Management</span></li>
+                        <li><i class="fas fa-puzzle-piece"></i> <span class="skill-item">Problem-solving</span></li>
+                    </ul>
+                </div>
+            </div>
         </section>
-        <section>
+        <section id="experience" class="container">
+            <h2>Professional Experience</h2>
+            <div class="experience-item">
+                <h3>Cloud Imperium Games (2022 - Present)</h3>
+                <div class="game-info"><p class="game-title">Star Citizen (PU)</p><p class="game-role">Technical Designer</p></div>
+                <ul class="experience-list">
+                    <li>Design, create, and implement solutions for a AAA Online Massive Multiplayer game where the player can enjoy a smooth universe.</li>
+                    <li>Work with CryEngine Custom and C++</li>
+                </ul>
+                <div class="game-info"><p class="game-title">Squadron 42</p><p class="game-role">Technical Designer</p></div>
+                <ul class="experience-list">
+                    <li>Design, create, and implement solutions for a AAA single-player space adventure</li>
+                    <li>Work with CryEngine Custom and C++</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Stage Clear Studios (2021 - 2022)</h3>
+                <div class="game-info"><p class="game-title">Real Madrid CF Football Blast</p><p class="game-role">Game Programmer</p></div>
+                <ul class="experience-list">
+                    <li>Prototyped and managed the programming team for a mobile soccer card strategy game</li>
+                    <li>Worked with Unity, C#, Photon, and Playfab</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Vancouver Film School (2020)</h3>
+                <div class="game-info"><p class="game-title">Data Breaker</p><p class="game-role">Game Programmer</p></div>
+                <ul class="experience-list">
+                    <li>Final Course project</li>
+                    <li>3D fighting adventure game where I created movement, camera, and combat from the player's perspective</li>
+                    <li>Worked with Unity and C#</li>
+                </ul>
+                <div class="game-info"><p class="game-title">Galactic Mechanic</p><p class="game-role">Game Programmer</p></div>
+                <ul class="experience-list">
+                    <li>Course team project</li>
+                    <li>RTS game where you control the mechanic robots of a spaceship that is close to being destroyed</li>
+                    <li>Worked with Unity and C#</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Estudio Future (2019)</h3>
+                <div class="game-info"><p class="game-title">Unannounced videogame and Enterprise applications (VR)</p><p class="game-role">Game designer</p></div>
+                <ul class="experience-list">
+                    <li>I designed and prototyped VR mechanics for an unannounced game</li>
+                    <li>Worked with Unity, C#, in-house toolset and Oculus api</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>U-Tad (2019)</h3>
+                <div class="game-info"><p class="game-title">Human Horizon</p><p class="game-role">Game designer and programmer</p></div>
+                <ul class="experience-list">
+                    <li>Final Degree project</li>
+                    <li>2D space simulation adventure where the player needs to explore the planets to obtain resources that allow him to continue</li>
+                    <li>Worked with Unity, C#</li>
+                </ul>
+            </div>
+        </section>
+        <section id="edutation" class="container">
+            <h2>Education</h2>
+            <div class="experience-item">
+                <h3>Programming for Games, Web and Mobile (VFS)</h3>
+                <p>Vancouver, Canada 2020</p>
+            </div>
+            <div class="experience-item">
+                <h3>Game Design Degree (U-tad)</h3>
+                <p>Madrid, Spain 2015 – 2019</p>
+            </div>
+            <div class="experience-item">
+                <h3>Business expert MBA (PowerMBA)</h3>
+                <p>Online, 2021</p>
+            </div>
+        </section>
+        <!--<section>
             <h2>Videos</h2>
             <p>Check out this video:</p>
             <div>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/IDtjzLzs7V8" title="Squadron 42:  I Held The Line" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>-->
+    </main>
+    <main id="main2">
+        <section id="experience" class="container">
+            <h2>Projects</h2>
+            <div class="experience-item">
+                <h3>Stage Clear Studios (2021 - 2022)</h3>
+                <div class="game-info"><p class="game-title">Real Madrid CF Football Blast</p><p class="game-role">Game Programmer</p></div>
+                <ul class="experience-list">
+                    <li>Prototyped and managed the programming team for a mobile soccer card strategy game</li>
+                    <li>Worked with Unity, C#, Photon, and Playfab</li>
+                </ul>
             </div>
         </section>
     </main>

@@ -5,14 +5,27 @@ body {
     background: url('images/background-enhanced.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
+    overflow-x: hidden;
 }
 
 header {
     background-color: #000000;
-    color: white;
-    text-align: center;
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    min-height: 70px;
+    border-bottom: #0779e4 3px solid;
+    position: fixed;
     width: 100%;
-    padding: 1em 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22vw; /* Add some space between the text and the image */
 }
 
 .header-content {
@@ -44,26 +57,63 @@ header {
     object-fit: cover; /* Ensure the image covers the box without distorting */
 }
 
+.header-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.header-buttons button {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+}
+
+.header-buttons button:hover {
+    color: #B82601; /* Embers */
+}
+
 main {
+    height: 0%;
+    width: 0%; /* Set the width of the main element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+main.active {
+    position:relative;
+    height: 100%;
     width: 80%; /* Set the width of the main element */
     max-width: 1200px; /* Set a maximum width */
     margin: 20px auto; /* Center the main element horizontally */
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
+    padding-bottom: 40px;
+    margin-top: 180px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transform: translateX(0);
 }
 
 h1, h2 {
-    color: #000000; /* Black */
+    color: #ffffff; /* Black */
+    text-shadow: 8px 8px 8px #000000;
 }
 
 p {
-    color: #813772; /* Posy */
+    color: #ffffff; /* Posy */
 }
 
 ul li {
-    color: #B82601; /* Embers */
+    color: #ffffff; /* Embers */
 }
 
 footer {
@@ -106,3 +156,108 @@ footer p {
     color: #B82601; /* Embers */
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.skills {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.skill-category {
+    background-color: #000000;
+    padding: 30px;
+    width: 500px;
+    min-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.skill-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.about-category {
+    background-color: #000000;
+    padding: 30px;
+    min-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.skill-item {
+    background-color: #B82601;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.skill-list {
+    list-style-type: none;
+    height: 140px;
+}
+
+.skill-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.skill-list li i {
+    width: 40px;
+    font-size: 25px;
+}
+
+.list-content {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+}
+
+.experience-item {
+    background-color: #000000;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.experience-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    color: #fff;
+}
+
+.game-info{
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+}
+
+.game-title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.game-role{
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #813772;
+}
+
+.experience-list{
+    margin-top: 0px;
+}
