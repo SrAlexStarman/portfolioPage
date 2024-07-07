@@ -1,10 +1,11 @@
 :root {
     --color-primary: #58A6FF; /* Bright Blue */
     --color-secondary: #8B949E; /* Medium Gray */
-    --color-text-light: #C9D1D9; /* Light Gray */
-    --color-background: #0D1117; /* Dark Blue Black */
-    --color-accent: #F85149; /* Bright Red */
+    --color-text-light: #ffffff; /* Light Gray */
+    --color-background: #090b0f; /* Dark Blue Black */
+    --color-accent: #80f849;
     /*
+    --color-accent: #F85149;
     --color-primary: #0779e4;
     --color-secondary: #B82601;
     --color-text: #333;
@@ -115,7 +116,7 @@ header {
 }
 
 .header-buttons button:hover {
-    color: var(--color-secondary);
+    color: var(--color-primary);
 }
 
 /* Main content */
@@ -179,7 +180,7 @@ main.active {
 }
 
 .skill-item {
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
     color: var(--color-text-light);
     padding: 5px 10px;
     border-radius: 20px;
@@ -259,7 +260,7 @@ footer {
 }
 
 footer p {
-    color: var(--color-secondary);
+    color: var(--color-primary);
 }
 
 .footer-content {
@@ -283,7 +284,7 @@ footer p {
 }
 
 .social-links a:hover {
-    color: var(--color-secondary);
+    color: var(--color-primary);
 }
 
 .project-item {
