@@ -1,18 +1,9 @@
 :root {
-    --color-primary: #58A6FF; /* Bright Blue */
-    --color-secondary: #8B949E; /* Medium Gray */
-    --color-text-light: #ffffff; /* Light Gray */
-    --color-background: #090b0f; /* Dark Blue Black */
+    --color-primary: #277ddf;
+    --color-secondary: #8B949E;
+    --color-text-light: #ffffff;
+    --color-background: #090b0f;
     --color-accent: #80f849;
-    /*
-    --color-accent: #F85149;
-    --color-primary: #0779e4;
-    --color-secondary: #B82601;
-    --color-text: #333;
-    --color-text-light: #fff;
-    --color-background: #000000;
-    --color-accent: #813772;
-    */
 }
 
 /* Base styles */
@@ -27,21 +18,16 @@ body {
 }
 
 /* Typography */
-h1, h2 {
+h1, h2, p, ul li {
     color: var(--color-text-light);
+}
+
+h1, h2 {
     text-shadow: 8px 8px 8px var(--color-background);
 }
 
 h2 {
     font-size: 1.8rem;
-}
-
-p {
-    color: var(--color-text-light);
-}
-
-ul li {
-    color: var(--color-text-light);
 }
 
 /* Layout */
@@ -54,7 +40,6 @@ ul li {
 /* Header */
 header {
     background-color: var(--color-background);
-    color: var(--color-text-light);
     padding: 15px 0;
     min-height: 70px;
     border-bottom: var(--color-primary) 3px solid;
@@ -71,11 +56,18 @@ header {
     gap: 22vw;
 }
 
-.header-content {
+.header-content, .header-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.header-content {
     gap: 50px;
+}
+
+.header-buttons {
+    gap: 30px;
 }
 
 .header-text {
@@ -97,13 +89,6 @@ header {
     border-radius: 20px;
     border: 2px solid var(--color-secondary);
     object-fit: cover;
-}
-
-.header-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
 }
 
 .header-buttons button {
@@ -146,21 +131,21 @@ main.active {
     overflow-y: auto;
 }
 
-/* Skills section */
+/* Skills and About sections */
+.skill-category, .about-category, .experience-item, .project-item {
+    background-color: var(--color-background);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
 .skills {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
     flex-wrap: wrap;
-}
-
-.skill-category, .about-category {
-    background-color: var(--color-background);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    margin-bottom: 40px;
 }
 
 .skill-category {
@@ -173,7 +158,11 @@ main.active {
     min-width: 300px;
 }
 
-.skill-category h3 {
+.about-category p {
+    margin: 0;
+}
+
+.skill-category h3, .experience-item h3 {
     font-size: 1.5rem;
     margin-bottom: 20px;
     color: var(--color-text-light);
@@ -209,21 +198,7 @@ main.active {
     gap: 10px;
 }
 
-/* Experience section */
-.experience-item {
-    background-color: var(--color-background);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    margin-bottom: 40px;
-}
-
-.experience-item h3 {
-    font-size: 1.5rem;
-    margin: 15px 0;
-    color: var(--color-text-light);
-}
-
+/* Experience and Project sections */
 .game-info {
     display: flex;
     justify-content: left;
@@ -233,7 +208,6 @@ main.active {
 .game-title {
     font-size: 1.2rem;
     font-weight: bold;
-    color: var(--color-text-light);
 }
 
 .game-role {
@@ -242,14 +216,40 @@ main.active {
     color: var(--color-accent);
 }
 
-.experience-list {
+.experience-list, .experience-list2 {
     margin-top: 0;
+}
+
+.experience-list2 {
+    list-style-type: none;
+}
+
+.project-item {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+
+.project-item h3 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.game-info p {
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.itchio-link {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 /* Footer */
 footer {
     background-color: rgba(0, 0, 0, 0.8);
-    color: var(--color-text-light);
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -287,37 +287,105 @@ footer p {
     color: var(--color-primary);
 }
 
-.project-item {
-    display: flex;
-    justify-content: center;
-    align-items:start;
-    gap: 20px;
-    background-color: var(--color-background);
-    padding: 30px;
+/* Burger Menu Styles */
+.burger-menu {
+    display: none;
+}
+
+.burger-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.burger-icon span {
+    width: 2rem;
+    height: 0.25rem;
+    background: var(--color-text-light);
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    margin-bottom: 40px;
+    transition: all 0.3s linear;
 }
 
-.project-item h3 {
-    font-size: 2rem;
-    margin: 0px;
+.menu-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: var(--color-background);
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-items button {
+    margin: 0.5rem 0;
     color: var(--color-text-light);
+    background: none;
+    border: none;
+    font-size: 28px;
 }
 
-.game-info p{
-    margin-top: 5px;
-    margin-bottom: 30px;
+.menu-items button:hover {
+    color: var(--color-primary);
 }
 
-.itchio-link {
-    margin-top: 20px;
-    display: flex;
-    justify-content:center;
+/* Media query for tablets and desktops */
+@media (min-width: 769px) {
+    .desktop-tablet-only {
+        display: flex;
+    }
+    .mobile-only {
+        display: none;
+    }
 }
 
-.experience-list2 {
-    margin-top: 0;
-    list-style-type: none;
-}
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .desktop-tablet-only {
+        display: none;
+    }
 
+    .mobile-only {
+        display: block;
+    }
+
+    .burger-icon {
+        display: flex;
+    }
+
+    .menu-items.open {
+        display: flex;
+        transform: translateY(0);
+    }
+
+    .header-text h1 {
+        font-size: 1.5em;
+        margin: 0 0 5px 0;
+    }
+    
+    .header-text h2 {
+        font-size: 1em;
+        margin: 0;
+    }
+    
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+        border-radius: 20px;
+        border: 2px solid var(--color-secondary);
+        object-fit: cover;
+    }
+
+    .header-content {
+        gap: 15px;
+    }
+}

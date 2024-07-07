@@ -19,3 +19,8 @@ function switchProjectsToAbout() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 };
+
+function toggleMenu() {
+    const menuItems = document.querySelector('.menu-items');
+    menuItems.classList.toggle('open');
+};
