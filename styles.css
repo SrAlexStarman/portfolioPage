@@ -1,63 +1,104 @@
+:root {
+    --color-primary: #58A6FF; /* Bright Blue */
+    --color-secondary: #8B949E; /* Medium Gray */
+    --color-text-light: #C9D1D9; /* Light Gray */
+    --color-background: #0D1117; /* Dark Blue Black */
+    --color-accent: #F85149; /* Bright Red */
+    /*
+    --color-primary: #0779e4;
+    --color-secondary: #B82601;
+    --color-text: #333;
+    --color-text-light: #fff;
+    --color-background: #000000;
+    --color-accent: #813772;
+    */
+}
+
+/* Base styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background: url('images/background-enhanced.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #333;
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
+/* Typography */
+h1, h2 {
+    color: var(--color-text-light);
+    text-shadow: 8px 8px 8px var(--color-background);
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+p {
+    color: var(--color-text-light);
+}
+
+ul li {
+    color: var(--color-text-light);
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
 header {
-    background-color: #000000;
-    color: #fff;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    background-color: var(--color-background);
+    color: var(--color-text-light);
+    padding: 15px 0;
     min-height: 70px;
-    border-bottom: #0779e4 3px solid;
+    border-bottom: var(--color-primary) 3px solid;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
 }
 
-.header-container{
+.header-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 22vw; /* Add some space between the text and the image */
+    gap: 22vw;
 }
 
 .header-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px; /* Add some space between the text and the image */
+    gap: 50px;
 }
 
 .header-text {
-    text-align: left; /* Ensure the text is aligned to the right */
+    text-align: left;
 }
 
 .header-text h1 {
-    font-size: 2.5em; /* Increase the font size of the h1 */
-    margin: 0; /* Remove default margin */
-    margin-bottom: 10px;
+    font-size: 2.5em;
+    margin: 0 0 10px 0;
 }
 
 .header-text h2 {
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
 
 .profile-pic {
-    width: 120px; /* Adjust the size as needed */
-    height: 120px; /* Ensure the image is square */
-    border-radius: 20px; /* Rounded corners */
-    border: 2px solid #B82601; /* Embers */ /* Border color and thickness */
-    object-fit: cover; /* Ensure the image covers the box without distorting */
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    border: 2px solid var(--color-secondary);
+    object-fit: cover;
 }
 
-.header-buttons{
+.header-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,7 +106,7 @@ header {
 }
 
 .header-buttons button {
-    color: white;
+    color: var(--color-text-light);
     margin: 0 10px;
     text-decoration: none;
     background: none;
@@ -74,130 +115,72 @@ header {
 }
 
 .header-buttons button:hover {
-    color: #B82601; /* Embers */
+    color: var(--color-secondary);
 }
 
+/* Main content */
 main {
     height: 0%;
-    width: 0%; /* Set the width of the main element */
+    width: 0%;
     position: absolute;
     top: 0;
     left: 0;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     opacity: 0;
     transform: translateX(100%);
+    overflow-y: hidden;
 }
 
 main.active {
-    position:relative;
+    position: relative;
     height: 100%;
-    width: 80%; /* Set the width of the main element */
-    max-width: 1200px; /* Set a maximum width */
-    margin: 20px auto; /* Center the main element horizontally */
-    padding: 20px;
-    padding-bottom: 40px;
-    margin-top: 180px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 140px auto 20px;
+    padding: 20px 20px 40px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     opacity: 1;
     transform: translateX(0);
+    overflow-y: auto;
 }
 
-h1, h2 {
-    color: #ffffff; /* Black */
-    text-shadow: 8px 8px 8px #000000;
-}
-
-p {
-    color: #ffffff; /* Posy */
-}
-
-ul li {
-    color: #ffffff; /* Embers */
-}
-
-footer {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1em 0;
-}
-
-footer p {
-    color: #B82601; /* Embers */
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    max-width: 1200px;
-    padding: 0 10px;
-}
-
-.social-links {
-    display: flex;
-}
-
-.social-links a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 32px;
-}
-
-.social-links a:hover {
-    color: #B82601; /* Embers */
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
+/* Skills section */
 .skills {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     gap: 40px;
     flex-wrap: wrap;
 }
 
-.skill-category {
-    background-color: #000000;
+.skill-category, .about-category {
+    background-color: var(--color-background);
     padding: 30px;
-    width: 500px;
-    min-width: 300px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     margin-bottom: 40px;
+}
+
+.skill-category {
+    width: 500px;
+    min-width: 300px;
+    margin-bottom: 20px;
+}
+
+.about-category {
+    min-width: 300px;
 }
 
 .skill-category h3 {
     font-size: 1.5rem;
     margin-bottom: 20px;
-    color: #fff;
-}
-
-.about-category {
-    background-color: #000000;
-    padding: 30px;
-    min-width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    margin-bottom: 40px;
+    color: var(--color-text-light);
 }
 
 .skill-item {
-    background-color: #B82601;
-    color: white;
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
     padding: 5px 10px;
     border-radius: 20px;
     font-size: 0.9em;
@@ -225,8 +208,9 @@ footer p {
     gap: 10px;
 }
 
+/* Experience section */
 .experience-item {
-    background-color: #000000;
+    background-color: var(--color-background);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -235,29 +219,104 @@ footer p {
 
 .experience-item h3 {
     font-size: 1.5rem;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    color: #fff;
+    margin: 15px 0;
+    color: var(--color-text-light);
 }
 
-.game-info{
+.game-info {
     display: flex;
     justify-content: left;
     gap: 10px;
 }
 
-.game-title{
+.game-title {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #fff;
+    color: var(--color-text-light);
 }
 
-.game-role{
+.game-role {
     font-size: 1.2rem;
     font-style: italic;
-    color: #813772;
+    color: var(--color-accent);
 }
 
-.experience-list{
-    margin-top: 0px;
+.experience-list {
+    margin-top: 0;
 }
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--color-text-light);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+}
+
+footer p {
+    color: var(--color-secondary);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    padding: 0 10px;
+}
+
+.social-links {
+    display: flex;
+}
+
+.social-links a {
+    color: var(--color-text-light);
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 32px;
+}
+
+.social-links a:hover {
+    color: var(--color-secondary);
+}
+
+.project-item {
+    display: flex;
+    justify-content: center;
+    align-items:start;
+    gap: 20px;
+    background-color: var(--color-background);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.project-item h3 {
+    font-size: 2rem;
+    margin: 0px;
+    color: var(--color-text-light);
+}
+
+.game-info p{
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.itchio-link {
+    margin-top: 20px;
+    display: flex;
+    justify-content:center;
+}
+
+.experience-list2 {
+    margin-top: 0;
+    list-style-type: none;
+}
+
