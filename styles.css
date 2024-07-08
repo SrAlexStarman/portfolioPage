@@ -36,7 +36,7 @@ h2 {
     font-weight: bold;
 }
 
-p {
+p{
     font-size: 1.1rem;
 }
 
@@ -45,6 +45,10 @@ p {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+ul, li{
+    font-size: 1.1rem;
 }
 
 /* Header */
@@ -183,7 +187,7 @@ main.active {
     color: var(--color-text-light);
     padding: 5px 10px;
     border-radius: 20px;
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 .skill-list {
