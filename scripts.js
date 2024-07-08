@@ -6,6 +6,7 @@ function switchAboutToProjects() {
         main1.classList.remove('active');
         main2.classList.add('active'); 
         window.scrollTo({ top: 0, behavior: 'smooth' });
+        toggleMenu();
     }
 };
 
@@ -17,6 +18,7 @@ function switchProjectsToAbout() {
         main2.classList.remove('active');
         main1.classList.add('active'); 
         window.scrollTo({ top: 0, behavior: 'smooth' });
+        toggleMenu();
     }
 };
 
