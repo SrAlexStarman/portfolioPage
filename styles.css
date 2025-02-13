@@ -1,9 +1,9 @@
 :root {
-    --color-primary: #277ddf;
-    --color-secondary: #8B949E;
+    --color-primary: #9f41f7;
+    --color-secondary: #4ee5f0;
     --color-text-light: #ffffff;
-    --color-background: #090b0f;
-    --color-accent: #80f849;
+    --color-background: #090b12;
+    --color-accent: #ff4090;
 }
 
 /* Base styles */
@@ -11,7 +11,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('images/background-enhanced2.webp') no-repeat center center fixed;
+    background: url('images/backgroundA.jpg') no-repeat center center fixed;
     background-size: cover;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -141,7 +141,6 @@ main.active {
     margin: 125px auto 40px;
     padding: 20px 20px 40px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     opacity: 1;
     transform: translateX(0);
     overflow-y: auto;
