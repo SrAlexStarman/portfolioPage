@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alejandro Lopez</title>
+    <title>Alejandro Lopez | Technical Designer</title>
+    <meta name="description" content="Professional portfolio of Alejandro Lopez, Technical Designer with experience in AAA game development">
     <link rel="icon" type="image/x-icon" href="images/gamepad-512.webp">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="header-container">
             <div class="header-content">
-                <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
+                <img src="images/profile.jpg" alt="Alejandro Lopez - Technical Designer" class="profile-pic">
                 <div class="header-text">
                     <h1>Alejandro Lopez</h1>
                     <h2>Technical Designer</h2>
@@ -23,7 +25,7 @@
                 <button onclick="switchAboutToProjects()" class="btn">Projects</button>
             </div>
             <div class="burger-menu mobile-only">
-                <button class="burger-icon" onclick="toggleMenu()">
+                <button class="burger-icon" onclick="toggleMenu()" aria-label="Toggle menu">
                   <span></span>
                   <span></span>
                   <span></span>
@@ -32,7 +34,7 @@
                   <button onclick="switchProjectsToAbout()" class="btn">About Me</button>
                   <button onclick="switchAboutToProjects()" class="btn">Projects</button>
                 </nav>
-              </div>
+            </div>
         </div>
     </header>
     <main id="main1" class="active">
@@ -48,18 +50,65 @@
                 <div class="skill-category">
                     <h2>Technical Skills</h2>
                     <ul class="skill-list">
-                        <li><i class="fas fa-code"></i> <div class="list-content"><span class="skill-item">C++</span> <span class="skill-item">C#</span><span class="skill-item">JavaScript</span></div></li>
-                        <li><i class="fas fa-gamepad"></i><div class="list-content"><span class="skill-item">Unity</span> <span class="skill-item">CryEngine</span> <span class="skill-item">Unreal</span></div></li>
-                        <li><i class="fas fa-globe"></i> <div class="list-content"><span class="skill-item">HTML</span> <span class="skill-item">CSS</span></div></li>
-                        <li><i class="fas fa-flag"></i> <div class="list-content"><span class="skill-item">Spanish</span> <span class="skill-item">English</span></div></li>
+                        <li>
+                            <i class="fas fa-code"></i> 
+                            <div class="list-content">
+                                <span class="skill-item">C++</span>
+                                <span class="skill-item">C#</span>
+                                <span class="skill-item">JavaScript</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-gamepad"></i>
+                            <div class="list-content">
+                                <span class="skill-item">Unity</span>
+                                <span class="skill-item">CryEngine</span>
+                                <span class="skill-item">Unreal</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-globe"></i>
+                            <div class="list-content">
+                                <span class="skill-item">HTML</span>
+                                <span class="skill-item">CSS</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-flag"></i>
+                            <div class="list-content">
+                                <span class="skill-item">Spanish</span>
+                                <span class="skill-item">English</span>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h2>Soft Skills</h2>
                     <ul class="skill-list">
-                        <li><i class="fas fa-comments"></i> <span class="skill-item">Communication</span></li>
-                        <li><i class="fas fa-clock"></i> <span class="skill-item">Time Management</span></li>
-                        <li><i class="fas fa-puzzle-piece"></i> <span class="skill-item">Problem-solving</span></li>
+                        <li>
+                            <i class="fas fa-comments"></i>
+                            <div class="list-content">
+                                <span class="skill-item">Communication</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div class="list-content">
+                                <span class="skill-item">Time Management</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-puzzle-piece"></i>
+                            <div class="list-content">
+                                <span class="skill-item">Problem-solving</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-users"></i>
+                            <div class="list-content">
+                                <span class="skill-item">Team Collaboration</span>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -67,35 +116,59 @@
         <section id="experience" class="container">
             <h1>Professional Experience</h1>
             <div class="experience-item">
-                <div class="experience-item-header"><h2>Cloud Imperium Games (2022 - Present)</h2><h3>Manchester (UK)</h3></div>
-                <div class="game-info"><p class="game-title">Star Citizen (PU)</p><p class="game-role">Technical Designer</p></div>
+                <div class="experience-item-header">
+                    <h2>Cloud Imperium Games (2022 - Present)</h2>
+                    <h3>Manchester (UK)</h3>
+                </div>
+                <div class="game-info">
+                    <p class="game-title">Star Citizen (PU)</p>
+                    <p class="game-role">Technical Designer</p>
+                </div>
                 <ul class="experience-list">
                     <li>Design, create, and implement solutions for a AAA Online Massive Multiplayer game where the player can enjoy a smooth universe.</li>
                     <li>Work with CryEngine Custom and C++</li>
                 </ul>
-                <div class="game-info"><p class="game-title">Squadron 42</p><p class="game-role">Technical Designer</p></div>
+                <div class="game-info">
+                    <p class="game-title">Squadron 42</p>
+                    <p class="game-role">Technical Designer</p>
+                </div>
                 <ul class="experience-list">
                     <li>Design, create, and implement solutions for a AAA single-player space adventure</li>
                     <li>Work with CryEngine Custom and C++</li>
                 </ul>
             </div>
             <div class="experience-item">
-                <div class="experience-item-header"><h2>Stage Clear Studios (2021 - 2022)</h2><h3>Madrid (Spain)</h3></div>
-                <div class="game-info"><p class="game-title">Real Madrid CF Football Blast</p><p class="game-role">Game Programmer</p></div>
+                <div class="experience-item-header">
+                    <h2>Stage Clear Studios (2021 - 2022)</h2>
+                    <h3>Madrid (Spain)</h3>
+                </div>
+                <div class="game-info">
+                    <p class="game-title">Real Madrid CF Football Blast</p>
+                    <p class="game-role">Game Programmer</p>
+                </div>
                 <ul class="experience-list">
                     <li>Prototyped and managed the programming team for a mobile soccer card strategy game</li>
                     <li>Worked with Unity, C#, Photon, and Playfab</li>
                 </ul>
             </div>
             <div class="experience-item">
-                <div class="experience-item-header"><h2>Vancouver Film School (2020)</h2><h3>Vancouver (Canada)</h3></div>
-                <div class="game-info"><p class="game-title">Data Breaker</p><p class="game-role">Game Programmer</p></div>
+                <div class="experience-item-header">
+                    <h2>Vancouver Film School (2020)</h2>
+                    <h3>Vancouver (Canada)</h3>
+                </div>
+                <div class="game-info">
+                    <p class="game-title">Data Breaker</p>
+                    <p class="game-role">Game Programmer</p>
+                </div>
                 <ul class="experience-list">
                     <li>Final Course project</li>
                     <li>3D fighting adventure game where I created movement, camera, and combat from the player's perspective</li>
                     <li>Worked with Unity and C#</li>
                 </ul>
-                <div class="game-info"><p class="game-title">Galactic Mechanic</p><p class="game-role">Game Programmer</p></div>
+                <div class="game-info">
+                    <p class="game-title">Galactic Mechanic</p>
+                    <p class="game-role">Game Programmer</p>
+                </div>
                 <ul class="experience-list">
                     <li>Course team project</li>
                     <li>RTS game where you control the mechanic robots of a spaceship that is close to being destroyed</li>
@@ -103,16 +176,28 @@
                 </ul>
             </div>
             <div class="experience-item">
-                <div class="experience-item-header"><h2>Estudio Future (2019)</h2><h3>Madrid (Spain)</h3></div>
-                <div class="game-info"><p class="game-title">Unannounced videogame and Enterprise applications (VR)</p><p class="game-role">Game designer</p></div>
+                <div class="experience-item-header">
+                    <h2>Estudio Future (2019)</h2>
+                    <h3>Madrid (Spain)</h3>
+                </div>
+                <div class="game-info">
+                    <p class="game-title">Unannounced videogame and Enterprise applications (VR)</p>
+                    <p class="game-role">Game designer</p>
+                </div>
                 <ul class="experience-list">
                     <li>I designed and prototyped VR mechanics for an unannounced game</li>
                     <li>Worked with Unity, C#, in-house toolset and Oculus api</li>
                 </ul>
             </div>
             <div class="experience-item">
-                <div class="experience-item-header"><h2>U-Tad (2019)</h2><h3>Madrid (Spain)</h3></div>
-                <div class="game-info"><p class="game-title">Human Horizon</p><p class="game-role">Game designer and programmer</p></div>
+                <div class="experience-item-header">
+                    <h2>U-Tad (2019)</h2>
+                    <h3>Madrid (Spain)</h3>
+                </div>
+                <div class="game-info">
+                    <p class="game-title">Human Horizon</p>
+                    <p class="game-role">Game designer and programmer</p>
+                </div>
                 <ul class="experience-list">
                     <li>Final Degree project</li>
                     <li>2D space simulation adventure where the player needs to explore the planets to obtain resources that allow him to continue</li>
@@ -120,7 +205,7 @@
                 </ul>
             </div>
         </section>
-        <section id="edutation" class="container">
+        <section id="education" class="container">
             <h1>Education</h1>
             <div class="experience-item">
                 <h2>Programming for Games, Web and Mobile (VFS)</h2>
@@ -137,7 +222,7 @@
         </section>
     </main>
     <main id="main2">
-        <section id="experience" class="container">
+        <section id="projects" class="container">
             <h1>Current Projects</h1>
             <div class="project-item video">
                 <div>
@@ -145,37 +230,46 @@
                 </div>
                 <div>                
                     <h2>Star Citizen (PU)</h2>
-                    <div class="game-info"><p class="game-title">Cloud Imperium Games</p><p class="game-role">Technical Designer</p></div>
-                    <ul class="experience-list2">
-                        <li></li>
-                        <li></li>
+                    <div class="game-info">
+                        <p class="game-title">Cloud Imperium Games</p>
+                        <p class="game-role">Technical Designer</p>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Working on technical design solutions for the persistent universe</li>
+                        <li>Implementing gameplay mechanics using CryEngine and C++</li>
                     </ul>
                 </div>
             </div>
             <div class="project-item video">
                 <div>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/IDtjzLzs7V8" title="Squadron 42:  I Held The Line" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/IDtjzLzs7V8" title="Squadron 42: I Held The Line" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div>                
                     <h2>Squadron 42</h2>
-                    <div class="game-info"><p class="game-title">Cloud Imperium Games</p><p class="game-role">Technical Designer</p></div>
-                    <ul class="experience-list2">
-                        <li></li>
-                        <li></li>
+                    <div class="game-info">
+                        <p class="game-title">Cloud Imperium Games</p>
+                        <p class="game-role">Technical Designer</p>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Designing and implementing technical solutions for the single-player campaign</li>
+                        <li>Creating gameplay systems and mechanics using CryEngine and C++</li>
                     </ul>
                 </div>
-            </div> 
-            <h2>Previous Projects</h2>
+            </div>
+            <h1>Previous Projects</h1>
             <div class="project-item video">
                 <div>
-                    <img src="images/stageclearheadercut.jpg" alt="">
+                    <img src="images/stageclearheadercut.jpg" alt="Real Madrid CF Football Blast" class="project-image">
                 </div>
                 <div>                
                     <h2>Real Madrid CF Football Blast</h2>
-                    <div class="game-info"><p class="game-title">Stage Clear Studios</p><p class="game-role">Game Programmer</p></div>
-                    <ul class="experience-list2">
-                        <li></li>
-                        <li></li>
+                    <div class="game-info">
+                        <p class="game-title">Stage Clear Studios</p>
+                        <p class="game-role">Game Programmer</p>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Prototyped and managed the programming team for a mobile soccer card strategy game</li>
+                        <li>Worked with Unity, C#, Photon, and Playfab</li>
                     </ul>
                 </div>
             </div> 
@@ -185,13 +279,18 @@
                 </div>
                 <div>                
                     <h2>Data Breaker</h2>
-                    <div class="game-info"><p class="game-title">Vancouver Film School</p><p class="game-role">Gameplay Programmer</p></div>
-                    <ul class="experience-list2">
-                        <li></li>
-                        <li></li>
+                    <div class="game-info">
+                        <p class="game-title">Vancouver Film School</p>
+                        <p class="game-role">Gameplay Programmer</p>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Final Course project - 3D fighting adventure game</li>
+                        <li>Created movement, camera, and combat mechanics from the player's perspective</li>
                     </ul>
                     <div class="itchio-link">
-                        <a href="https://vfs-gdpg.itch.io/data-breaker" target="_blank"><img src="images/itchio.png" alt="" width="244.2" height="74" style="border-radius: 10px;"></a>
+                        <a href="https://vfs-gdpg.itch.io/data-breaker" target="_blank" aria-label="Play Data Breaker on itch.io">
+                            <img src="images/itchio.png" alt="itch.io" width="244.2" height="74" style="border-radius: 10px;">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -201,24 +300,42 @@
                 </div>
                 <div>                
                     <h2>Galactic Mechanic</h2>
-                    <div class="game-info"><p class="game-title">Vancouver Film School</p><p class="game-role">Gameplay Programmer</p></div>
-                    <ul class="experience-list2">
-                        <li></li>
-                        <li></li>
+                    <div class="game-info">
+                        <p class="game-title">Vancouver Film School</p>
+                        <p class="game-role">Gameplay Programmer</p>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Course team project - RTS game where you control mechanic robots on a damaged spaceship</li>
+                        <li>Implemented unit control systems and resource management mechanics</li>
                     </ul>
                 </div>
-            </div>      
+            </div>
         </section>
     </main>
     <footer>
         <div class="footer-content">
-            <p>&copy; 2025 Alejandro Lopez</p>
+            <p>&copy; 2023 Alejandro Lopez. All rights reserved.</p>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/alejandrolmunoz" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/SrAlexStarman" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/alejandro-lopez-b1a3b1b1/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/SrAlexStarman" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
             </div>
         </div>
     </footer>
-    <script src="scripts.js"></script>
+    <script>
+        function switchAboutToProjects() {
+            document.getElementById('main1').classList.remove('active');
+            document.getElementById('main2').classList.add('active');
+        }
+        
+        function switchProjectsToAbout() {
+            document.getElementById('main2').classList.remove('active');
+            document.getElementById('main1').classList.add('active');
+        }
+        
+        function toggleMenu() {
+            const menuItems = document.querySelector('.menu-items');
+            menuItems.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
