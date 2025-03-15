@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Alejandro Lopez | Technical Designer</title>
     <meta name="description" content="Professional portfolio of Alejandro Lopez, Technical Designer with experience in AAA game development">
     <link rel="icon" type="image/x-icon" href="images/gamepad-512.webp">
@@ -323,19 +323,65 @@
     </footer>
     <script>
         function switchAboutToProjects() {
-            document.getElementById('main1').classList.remove('active');
-            document.getElementById('main2').classList.add('active');
+            const main1 = document.getElementById('main1');
+            const main2 = document.getElementById('main2');
+            
+            if (main1.classList.contains('active')) {
+                main1.classList.remove('active');
+                main2.classList.add('active'); 
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                // Close mobile menu if open
+                const menuItems = document.querySelector('.menu-items');
+                if (menuItems.classList.contains('open')) {
+                    menuItems.classList.remove('open');
+                }
+            }
         }
         
         function switchProjectsToAbout() {
-            document.getElementById('main2').classList.remove('active');
-            document.getElementById('main1').classList.add('active');
+            const main1 = document.getElementById('main1');
+            const main2 = document.getElementById('main2');
+            
+            if (main2.classList.contains('active')) {
+                main2.classList.remove('active');
+                main1.classList.add('active'); 
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                // Close mobile menu if open
+                const menuItems = document.querySelector('.menu-items');
+                if (menuItems.classList.contains('open')) {
+                    menuItems.classList.remove('open');
+                }
+            }
         }
         
         function toggleMenu() {
             const menuItems = document.querySelector('.menu-items');
             menuItems.classList.toggle('open');
         }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menuItems = document.querySelector('.menu-items');
+            const burgerIcon = document.querySelector('.burger-icon');
+            
+            if (menuItems.classList.contains('open') && 
+                !menuItems.contains(event.target) && 
+                !burgerIcon.contains(event.target)) {
+                menuItems.classList.remove('open');
+            }
+        });
+        
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                const menuItems = document.querySelector('.menu-items');
+                if (menuItems.classList.contains('open')) {
+                    menuItems.classList.remove('open');
+                }
+            }
+        });
     </script>
 </body>
 </html>
