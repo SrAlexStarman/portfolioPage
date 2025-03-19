@@ -21,8 +21,8 @@
                 </div>
             </div>
             <div class="header-buttons desktop-tablet-only">
-                <button onclick="switchProjectsToAbout()" class="btn">About Me</button>
-                <button onclick="switchAboutToProjects()" class="btn">Projects</button>
+                <button onclick="switchProjectsToAbout()" class="btn active" id="aboutBtn">About Me</button>
+                <button onclick="switchAboutToProjects()" class="btn" id="projectsBtn">Projects</button>
             </div>
             <div class="burger-menu mobile-only">
                 <button class="burger-icon" onclick="toggleMenu()" aria-label="Toggle menu">
@@ -31,8 +31,8 @@
                   <span></span>
                 </button>
                 <nav class="menu-items">
-                  <button onclick="switchProjectsToAbout()" class="btn">About Me</button>
-                  <button onclick="switchAboutToProjects()" class="btn">Projects</button>
+                  <button onclick="switchProjectsToAbout()" class="btn active" id="aboutBtnMobile">About Me</button>
+                  <button onclick="switchAboutToProjects()" class="btn" id="projectsBtnMobile">Projects</button>
                 </nav>
             </div>
         </div>
@@ -331,6 +331,12 @@
                 main2.classList.add('active'); 
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 
+                // Update active button state
+                document.getElementById('aboutBtn').classList.remove('active');
+                document.getElementById('projectsBtn').classList.add('active');
+                document.getElementById('aboutBtnMobile').classList.remove('active');
+                document.getElementById('projectsBtnMobile').classList.add('active');
+                
                 // Close mobile menu if open
                 const menuItems = document.querySelector('.menu-items');
                 if (menuItems.classList.contains('open')) {
@@ -347,6 +353,12 @@
                 main2.classList.remove('active');
                 main1.classList.add('active'); 
                 window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                // Update active button state
+                document.getElementById('projectsBtn').classList.remove('active');
+                document.getElementById('aboutBtn').classList.add('active');
+                document.getElementById('projectsBtnMobile').classList.remove('active');
+                document.getElementById('aboutBtnMobile').classList.add('active');
                 
                 // Close mobile menu if open
                 const menuItems = document.querySelector('.menu-items');

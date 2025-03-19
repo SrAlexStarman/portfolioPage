@@ -162,11 +162,6 @@ header {
     border: 2px solid var(--color-primary);
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform var(--transition-speed) ease;
-}
-
-.profile-pic:hover {
-    transform: scale(1.05);
 }
 
 .btn {
@@ -187,6 +182,13 @@ header {
     background-color: var(--color-primary);
     color: var(--color-text-light);
     transform: translateY(-2px);
+}
+
+.btn.active {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .header-buttons button {
@@ -551,6 +553,12 @@ footer p {
     transform: translateY(-2px);
 }
 
+.menu-items .btn.active {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Media query for tablets and desktops */
 @media (min-width: 769px) {
     .desktop-tablet-only {
@@ -566,6 +574,19 @@ footer p {
     
     .project-item > div {
         flex: 1;
+    }
+    
+    /* Make skill categories display in parallel in desktop view */
+    .skill-category {
+        width: calc(50% - 20px);
+        min-height: 100%;
+    }
+    
+    .skills {
+        flex-wrap: nowrap;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 20px;
     }
 }
 
