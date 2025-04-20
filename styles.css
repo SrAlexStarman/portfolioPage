@@ -56,7 +56,6 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 2.2rem;
     font-weight: 700;
-    margin-top: 40px;
     margin-bottom: 2rem;
     position: relative;
     padding-bottom: 0.5rem;
@@ -89,6 +88,7 @@ p {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    margin-bottom: 4em;
 }
 
 ul, li {
@@ -213,8 +213,8 @@ main.active {
     height: 100%;
     width: 80%;
     max-width: 1200px;
-    margin: 125px auto 80px;
-    padding: 20px 20px 40px;
+    margin: 120px auto 80px;
+    padding: 40px 20px 40px;
     border-radius: 8px;
     opacity: 1;
     transform: translateX(0);
@@ -227,7 +227,6 @@ main.active {
     padding: 30px;
     border-radius: 10px;
     box-shadow: var(--box-shadow);
-    margin-bottom: 25px;
     border-left: 3px solid var(--color-primary);
     transition: transform var(--transition-speed) ease;
 }
