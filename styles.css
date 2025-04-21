@@ -757,7 +757,7 @@ footer p {
     }
 }
 
-.project-description ul li a {
+a {
     color: #6B8FF5;
     font-weight: 600;
     text-decoration: underline;
@@ -766,7 +766,7 @@ footer p {
     transition: color 0.2s, text-decoration-thickness 0.2s;
     border-radius: 2px;
 }
-.project-description ul li a:hover, .project-description ul li a:focus {
+a:hover, a:focus {
     color: #9cbcff;
     text-decoration-thickness: 3px;
     outline: none;
