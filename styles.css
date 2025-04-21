@@ -348,6 +348,10 @@ main.active {
 }
 
 /* Experience and Project sections */
+
+#projects {
+    margin-bottom: 40px;
+}
 .game-info {
     display: flex;
     align-items: center;
@@ -401,6 +405,7 @@ main.active {
 .project-item {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 25px;
     align-items: flex-start;
     gap: 30px;
     flex-wrap: wrap;
@@ -858,7 +863,7 @@ footer p {
     }
     
     .header-text h2 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     
     .profile-pic {
