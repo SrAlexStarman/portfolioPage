@@ -26,8 +26,8 @@
                 </div>
             </div>
             <div class="header-buttons desktop-tablet-only">
-                <button onclick="switchProjectsToAbout()" class="btn active" id="aboutBtn">About Me</button>
-                <button onclick="switchAboutToProjects()" class="btn" id="projectsBtn">Projects</button>
+                <a href="index.html" class="btn active" id="aboutBtn">About Me</a>
+                <a href="projects.html" class="btn" id="projectsBtn">Projects</a>
             </div>
             <div class="burger-menu mobile-only">
                 <button class="burger-icon" onclick="toggleMenu()" aria-label="Toggle menu">
@@ -36,8 +36,8 @@
                     <span></span>
                 </button>
                 <nav class="menu-items">
-                    <button onclick="switchProjectsToAbout()" class="btn active" id="aboutBtnMobile">About Me</button>
-                    <button onclick="switchAboutToProjects()" class="btn" id="projectsBtnMobile">Projects</button>
+                    <a href="index.html" class="btn active" id="aboutBtnMobile">About Me</a>
+                    <a href="projects.html" class="btn" id="projectsBtnMobile">Projects</a>
                 </nav>
             </div>
         </div>
@@ -504,52 +504,6 @@
         </div>
     </footer>
     <script>
-        function switchAboutToProjects() {
-            const main1 = document.getElementById('main1');
-            const main2 = document.getElementById('main2');
-
-            if (main1.classList.contains('active')) {
-                main1.classList.remove('active');
-                main2.classList.add('active');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-
-                // Update active button state
-                document.getElementById('aboutBtn').classList.remove('active');
-                document.getElementById('projectsBtn').classList.add('active');
-                document.getElementById('aboutBtnMobile').classList.remove('active');
-                document.getElementById('projectsBtnMobile').classList.add('active');
-
-                // Close mobile menu if open
-                const menuItems = document.querySelector('.menu-items');
-                if (menuItems.classList.contains('open')) {
-                    menuItems.classList.remove('open');
-                }
-            }
-        }
-
-        function switchProjectsToAbout() {
-            const main1 = document.getElementById('main1');
-            const main2 = document.getElementById('main2');
-
-            if (main2.classList.contains('active')) {
-                main2.classList.remove('active');
-                main1.classList.add('active');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-
-                // Update active button state
-                document.getElementById('projectsBtn').classList.remove('active');
-                document.getElementById('aboutBtn').classList.add('active');
-                document.getElementById('projectsBtnMobile').classList.remove('active');
-                document.getElementById('aboutBtnMobile').classList.add('active');
-
-                // Close mobile menu if open
-                const menuItems = document.querySelector('.menu-items');
-                if (menuItems.classList.contains('open')) {
-                    menuItems.classList.remove('open');
-                }
-            }
-        }
-
         function toggleMenu() {
             const menuItems = document.querySelector('.menu-items');
             menuItems.classList.toggle('open');
@@ -569,11 +523,9 @@
 
         // Handle window resize
         window.addEventListener('resize', function () {
-            if (window.innerWidth > 768) {
-                const menuItems = document.querySelector('.menu-items');
-                if (menuItems.classList.contains('open')) {
-                    menuItems.classList.remove('open');
-                }
+            const menuItems = document.querySelector('.menu-items');
+            if (window.innerWidth > 768 && menuItems.classList.contains('open')) {
+                menuItems.classList.remove('open');
             }
         });
     </script>

@@ -176,6 +176,8 @@ header {
     transition: all var(--transition-speed) ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-decoration: none; /* Ensure anchor tags look like buttons */
+    display: inline-block; /* Give anchors button-like box model */
 }
 
 .btn:hover {
@@ -189,6 +191,10 @@ header {
     color: var(--color-text-light);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:visited {
+    color: var(--color-text-light);
 }
 
 .header-buttons button {

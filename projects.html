@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Projects | Alejandro Lopez</title>
+    <meta name="description" content="Projects portfolio for Alejandro Lopez, Technical Designer">
+    <link rel="icon" type="image/x-icon" href="images/gamepad-512.webp">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header with navigation links -->
+    <header>
+        <div class="header-container">
+            <div class="header-content">
+                <img src="images/profile.jpg" alt="Alejandro Lopez - Technical Designer" class="profile-pic">
+                <div class="header-text">
+                    <h1>Alejandro Lopez</h1>
+                    <h2>Experienced Technical Designer</h2>
+                </div>
+            </div>
+            <div class="header-buttons desktop-tablet-only">
+                <a href="index.html" class="btn" id="aboutBtn">About Me</a>
+                <a href="projects.html" class="btn active" id="projectsBtn">Projects</a>
+            </div>
+            <div class="burger-menu mobile-only">
+                <button class="burger-icon" onclick="toggleMenu()" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="menu-items">
+                    <a href="index.html" class="btn" id="aboutBtnMobile">About Me</a>
+                    <a href="projects.html" class="btn active" id="projectsBtnMobile">Projects</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects content from previous main2 -->
+    <main class="active">
+        <section id="projects" class="container">
+            <h1>Current Projects</h1>
+            <div class="project-item video">
+                <iframe src="https://www.youtube.com/embed/nWm_OhIKms8" title="The Future of Gaming: StarEngine"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h2 class="project-title">Star Citizen (PU)</h2>
+                        <div class="project-meta">
+                            <span class="game-title">Cloud Imperium Games</span>
+                            <span class="game-role">Technical Designer</span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <section id="overdrive-initiative">
+                            <h3>Overdrive Initiative <a href="https://youtu.be/lx1D3UeEdQ0" target="_blank"
+                                    rel="noopener noreferrer"><img src="images/youtube.png" alt="Watch on YouTube"
+                                        width="24" height="24" style="vertical-align: middle; margin-left: 10px;"></a>
+                            </h3>
+                            <p>As part of my team’s inaugural foray into PU development, we spearheaded the Overdrive
+                                Initiative, a five-mission chain that culminated in a unique in-game event.</p>
+                            <ul>
+                                <li>Designing and implementing mission logic</li>
+                                <li>Defining and integrating mission entities</li>
+                                <li>Identifying and resolving bottlenecks in the mission-designer pipeline and tools</li>
+                                <li>Debugging critical issues to ensure stability</li>
+                                <li>Balancing ship-combat encounters for optimal gameplay</li>
+                            </ul>
+                        </section>
+
+                        <section id="alpha-3-23">
+                            <h3>Alpha 3.23<a href="https://youtu.be/FMgmo8Dfslk" target="_blank"
+                                    rel="noopener noreferrer"><img src="images/youtube.png" alt="Watch on YouTube"
+                                        width="24" height="24" style="vertical-align: middle; margin-left: 10px;"></a>
+                            </h3>
+                            <p>Work on the implementation of the first creatures in the game and QoL imporvements.</p>
+                            <ul>
+                                <li>Setting up harvestable resources on <a href="https://youtu.be/jXIDcsDwUas" target="_blank"
+                                        rel="noopener noreferrer">creatures</a></li>
+                                <li>Creating a distinct variant entity for each creature</li>
+                                <li>Modifying elevator panels to add a quick-call interaction</li>
+                            </ul>
+                        </section>
+
+                        <section id="ai-demo-citizencon-2954">
+                            <h3>CitizenCon 2954 (2024)</h3>
+                            <p>Helped bring the to life some of the demos showcased at CitizenCon 2954.</p>
+                            <ul>
+                                <li>Defining AI behaviors and scripting of the <a
+                                        href="https://youtu.be/wYvPpQ25XGc?t=2737" target="_blank"
+                                        rel="noopener noreferrer">AI Demo</a></li>
+                                <li>Implementing mineable resources and harvestable fangs on <a
+                                        href="https://youtu.be/dvzitYTukmQ?t=1423" target="_blank"
+                                        rel="noopener noreferrer">sandworms</a></li>
+                            </ul>
+                        </section>
+
+                        <section id="alpha-4-0">
+                            <h3>Alpha 4.0<a href="https://youtu.be/DE3ePRgpUQo" target="_blank" rel="noopener noreferrer"><img
+                                        src="images/youtube.png" alt="Watch on YouTube" width="24" height="24"
+                                        style="vertical-align: middle; margin-left: 10px;"></a>
+                            </h3>
+                            <p>Contributed to major gameplay and stability improvements on the Contested Zones..</p>
+                            <ul>
+                                <li>Developing a new door mechanic requiring fuses that deplete over time</li>
+                                <li>Fixing a bug that prevented proper player authorization for hospital rooms</li>
+                            </ul>
+                        </section>
+
+                        <section id="data-scripting-component">
+                            <h3>Data Scripting Component Ownership</h3>
+                            <p>Spearheaded my team’s ownership of a core data scripting component, enhancing designer
+                                workflows.</p>
+                            <ul>
+                                <li>Leading adoption and integration of the scripting component</li>
+                                <li>Coding new scripting snippets to expand functionality</li>
+                                <li>Improving interoperability between the scripting component and other systems</li>
+                            </ul>
+                        </section>
+
+                        <section id="alpha-4-1">
+                            <h3>Alpha 4.1<a href="https://youtu.be/NArGjlRFsQQ" target="_blank" rel="noopener noreferrer"><img
+                                        src="images/youtube.png" alt="Watch on YouTube" width="24" height="24"
+                                        style="vertical-align: middle; margin-left: 10px;"></a>
+                            </h3>
+                            <p>Continued support with bug fixes and gameplay setup on Align and Mine world sandbox
+                                event.</p>
+                            <ul>
+                                <li>Addressing critical bug fixes</li>
+                                <li>Setting up the laser-beam kill volume system</li>
+                            </ul>
+                        </section>
+
+                        <section id="NDA-work">
+                            <h3>Work under NDA</h3>
+                            <p>Apart from the work I have done on Star Citizen patches, I am also involved on the design
+                                of multiple core tools and refactors that look to improve workflows and provide new
+                                functionalities to the designers.</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item video">
+                <iframe src="https://www.youtube.com/embed/IDtjzLzs7V8" title="Squadron 42: I Held The Line" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div>
+                    <div class="project-header">
+                        <h2 class="project-title">Squadron 42</h2>
+                        <div class="project-meta">
+                            <span class="game-title">Cloud Imperium Games</span>
+                            <span class="game-role">Technical Designer</span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <section id="SQ42">
+                            <ul class="experience-list">
+                                <li>Refactor and improve the existing visual scripting tool to unlock level design work.
+                                    This ended up in a long term support of the tool providing new nodes and features that
+                                    streamlined some of the scripting flow, quick prototyping and testmap creation</li>
+                                <li>Spearheaded the implementation between the scripting system and the AI one</li>
+                                <li>Prototyped and implemented unique puzzles</li>
+                                <li>Came up with the first implementation of the QTEs</li>
+                                <li>Supported first reveal video creation levels</li>
+                                <li>Supported SQ42 live demo of CitizenCon 2954 (2024)</li>
+                                <li>Created multiple testmaps to support interactable and AI teams</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <h1>Previous Projects</h1>
+            <div class="project-item video">
+                <img src="images/stageclearheadercut.jpg" alt="Real Madrid CF Football Blast" class="project-image">
+                <div>
+                    <div class="project-header">
+                        <h2 class="project-title">Real Madrid CF Football Blast</h2>
+                        <div class="project-meta">
+                            <span class="game-title">Stage Clear Studios</span>
+                            <span class="game-role">Game Programmer</span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <section id="Stageclear">
+                            <ul class="experience-list">
+                                <li>First I received the task of take a game made by other company that client didn't like it and create a prototype of the requested game reusing as much as possible from the previous game.</li>
+                                <li>After succeding in the first task, I was assigned to the development of the new game. Because of being the programmer of the preproduction phase, I ended up leading a team of 3 other programmers.</li>
+                                <li>We successfully completed the development of the game for IOS and Android. Using functionalities from Playfab and Google Analytics.</li>
+                                <li>Sadly the game didn't get the success expected and it was cancelled.</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Pj81CkmV9Z8" title="Data Breaker Trailer" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div>
+                    <div class="project-header">
+                        <h2 class="project-title">Data Breaker</h2>
+                        <div class="project-meta">
+                            <span class="game-title">Vancouver Film School</span>
+                            <span class="game-role">Gameplay Programmer</span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <section id="Databreaker">
+                            <p>As one of the programmers in this project I have work on:</p>
+                            <ul class="experience-list">
+                                <li>Setting the character movement and input system</li>
+                                <li>Created a custom camera system. I had the knowledge to use Cinemachine camera system but I wanted to take the challenge and learn how it works</li>
+                                <li>I created a combat and combo system. This was connected with the camera system as I created a selected target camera mode</li>
+                            </ul>
+                            <div class="itchio-link">
+                                <a href="https://vfs-gdpg.itch.io/data-breaker" target="_blank" aria-label="Play Data Breaker on itch.io">
+                                    <img src="images/itchio.png" alt="itch.io" width="244.2" height="74" style="border-radius: 10px;">
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/6ONpP3DJlEw" title="Galactic Mechanic Presentation Playthrough" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div>
+                    <div class="project-header">
+                        <h2 class="project-title">Galactic Mechanic</h2>
+                        <div class="project-meta">
+                            <span class="game-title">Vancouver Film School</span>
+                            <span class="game-role">Gameplay Programmer</span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <section id="GalacticMechanic">
+                            <p>As the main programmer in this project I have work on:</p>
+                            <ul class="experience-list">
+                                <li>Created an RTS unit selection system.</li>
+                                <li>Implemented the units movement and the usables for them (places where a unit can occupy a slot to perform actions)</li>
+                                <li>Created the behavior of the usables</li>
+                                <li>Set up the UI canvases that allowed the designers to work with it</li>
+                                <li>The game was time based, so I created a tool for the designers to set the events and their probabilities depending on the time</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/IQ7-YmhLgRw?si=tt9JIC9kVrh8I8VL" title="Human Horizon Presentation Playthrough" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div>
+                    <div class="project-header">
+                        <h2 class="project-title">Human Horizon</h2>
+                        <div class="project-meta">
+                            <span class="game-title">Utad</span>
+                            <span class="game-role">Gameplay Programmer and Designer</span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <section id="HumanHorizon">
+                            <p>As one of the two devs of this project I have work on:</p>
+                            <ul class="experience-list">
+                                <li>Ship control affected by the gravity of the planets of the game</li>
+                                <li>Based on the previous point I have coded a prediction system that allowed to show with a line what would be the trajectory of the ship with current force and no input</li>
+                                <li>Created the movement of the astronaut on the rounded planets</li>
+                                <li>Created the movement of the drone and the resource capture mechanic</li>
+                                <li>Coded the inventory system for the ship</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Alejandro Lopez. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/alejandrolmunoz" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/SrAlexStarman" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Responsive burger menu identical to index.html
+        function toggleMenu() {
+            const menuItems = document.querySelector('.menu-items');
+            menuItems.classList.toggle('open');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function (event) {
+            const menuItems = document.querySelector('.menu-items');
+            const burgerIcon = document.querySelector('.burger-icon');
+
+            if (menuItems.classList.contains('open') &&
+                !menuItems.contains(event.target) &&
+                !burgerIcon.contains(event.target)) {
+                menuItems.classList.remove('open');
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function () {
+            const menuItems = document.querySelector('.menu-items');
+            if (window.innerWidth > 768 && menuItems.classList.contains('open')) {
+                menuItems.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+
+</html>
