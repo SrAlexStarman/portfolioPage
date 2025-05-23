@@ -11,8 +11,8 @@ function includeHTML(selector, url, callback) {
 function setActiveNav() {
   // Set active class on nav links based on current page
   const page = window.location.pathname.split('/').pop();
-  const aboutBtns = document.querySelectorAll('#aboutBtn, #aboutBtnMobile');
-  const projectsBtns = document.querySelectorAll('#projectsBtn, #projectsBtnMobile');
+  const aboutBtns = document.querySelectorAll('#about-btn, #about-btn-mobile');
+  const projectsBtns = document.querySelectorAll('#projects-btn, #projects-btn-mobile');
   if (page === 'index.html' || page === '' || page === 'index') {
     aboutBtns.forEach(btn => btn.classList.add('active'));
     projectsBtns.forEach(btn => btn.classList.remove('active'));
