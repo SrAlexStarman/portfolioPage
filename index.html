@@ -16,32 +16,7 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-container">
-            <div class="header-content">
-                <img src="images/profile.jpg" alt="Alejandro Lopez - Technical Designer" class="profile-pic">
-                <div class="header-text">
-                    <h1>Alejandro Lopez</h1>
-                    <h2>Experienced Technical Designer</h2>
-                </div>
-            </div>
-            <div class="header-buttons desktop-tablet-only">
-                <a href="index.html" class="btn active" id="aboutBtn">About Me</a>
-                <a href="projects.html" class="btn" id="projectsBtn">Projects</a>
-            </div>
-            <div class="burger-menu mobile-only">
-                <button class="burger-icon" onclick="toggleMenu()" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <nav class="menu-items">
-                    <a href="index.html" class="btn active" id="aboutBtnMobile">About Me</a>
-                    <a href="projects.html" class="btn" id="projectsBtnMobile">Projects</a>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <header></header>
     <main id="main1" class="active">
         <section id="about" class="container">
             <h1>About Me</h1>
@@ -492,43 +467,8 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Alejandro Lopez. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/alejandrolmunoz" target="_blank" aria-label="LinkedIn"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/SrAlexStarman" target="_blank" aria-label="GitHub"><i
-                        class="fab fa-github"></i></a>
-            </div>
-        </div>
-    </footer>
-    <script>
-        function toggleMenu() {
-            const menuItems = document.querySelector('.menu-items');
-            menuItems.classList.toggle('open');
-        }
-
-        // Close menu when clicking outside
-        document.addEventListener('click', function (event) {
-            const menuItems = document.querySelector('.menu-items');
-            const burgerIcon = document.querySelector('.burger-icon');
-
-            if (menuItems.classList.contains('open') &&
-                !menuItems.contains(event.target) &&
-                !burgerIcon.contains(event.target)) {
-                menuItems.classList.remove('open');
-            }
-        });
-
-        // Handle window resize
-        window.addEventListener('resize', function () {
-            const menuItems = document.querySelector('.menu-items');
-            if (window.innerWidth > 768 && menuItems.classList.contains('open')) {
-                menuItems.classList.remove('open');
-            }
-        });
-    </script>
+    <footer></footer>
+    <script src="include.js"></script>
 </body>
 
 </html>
