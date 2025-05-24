@@ -16,7 +16,32 @@
 </head>
 
 <body>
-    <header></header>
+    <header>
+    <div class="header-container">
+        <div class="header-content">
+            <img src="images/profile.jpg" alt="Alejandro Lopez - Technical Designer" class="profile-pic" loading="lazy" width="300" height="300">
+            <div class="header-text">
+                <h1>Alejandro Lopez</h1>
+                <h2>Experienced Technical Designer</h2>
+            </div>
+        </div>
+        <div class="header-buttons desktop-tablet-only">
+            <a href="index.html" class="btn" id="about-btn">About Me</a>
+            <a href="projects.html" class="btn" id="projects-btn">Projects</a>
+        </div>
+        <div class="burger-menu mobile-only">
+            <button class="burger-icon" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="menu-items">
+                <a href="index.html" class="btn" id="about-btn-mobile">About Me</a>
+                <a href="projects.html" class="btn" id="projects-btn-mobile">Projects</a>
+            </nav>
+        </div>
+    </div>
+</header>
     <main id="main-1" class="active">
         <section id="about" class="container">
             <h1>About Me</h1>
@@ -466,7 +491,7 @@
         </section>
     </main>
     <footer></footer>
-    <script src="include.js"></script>
+    
 </body>
 
 </html>
