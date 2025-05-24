@@ -34,10 +34,13 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    /* Prefer WebP for background if available, fallback to JPEG */
     background: 
         linear-gradient(rgba(15, 22, 36, 0.92), rgba(15, 22, 36, 0.98)),
+        url('images/backgroundA.webp') no-repeat center center fixed,
         url('images/backgroundA.jpg') no-repeat center center fixed;
     background-size: cover;
+    /* If .webp is not supported, fallback will occur via <noscript> or JS if needed */
     margin: 0;
     padding: 0;
 }
