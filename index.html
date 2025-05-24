@@ -26,8 +26,9 @@
             </div>
         </div>
         <div class="header-buttons desktop-tablet-only">
-            <a href="index.html" class="btn" id="about-btn">About Me</a>
+            <a href="index.html" class="btn active" id="about-btn">About Me</a>
             <a href="projects.html" class="btn" id="projects-btn">Projects</a>
+            <a href="code.html" class="btn" id="code-btn">Code</a>
         </div>
         <div class="burger-menu mobile-only">
             <button class="burger-icon" onclick="toggleMenu()" aria-label="Toggle menu">
@@ -36,8 +37,9 @@
                 <span></span>
             </button>
             <nav class="menu-items">
-                <a href="index.html" class="btn" id="about-btn-mobile">About Me</a>
+                <a href="index.html" class="btn active" id="about-btn-mobile">About Me</a>
                 <a href="projects.html" class="btn" id="projects-btn-mobile">Projects</a>
+                <a href="code.html" class="btn" id="code-btn-mobile">Code</a>
             </nav>
         </div>
     </div>
@@ -492,6 +494,19 @@
     </main>
     <footer></footer>
     
+<script>
+// Script para resaltar el botón activo según la URL
+const path = window.location.pathname.split('/').pop();
+const navLinks = document.querySelectorAll('.header-buttons .btn, .menu-items .btn');
+navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if ((href === path) || (href === '' && (path === '' || path === 'index.html'))) {
+        link.classList.add('active');
+    } else {
+        link.classList.remove('active');
+    }
+});
+</script>
 </body>
 
 </html>
