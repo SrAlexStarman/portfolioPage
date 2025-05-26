@@ -13,9 +13,76 @@
 <body>
     <header id="header"></header>
     <main class="active">
-        <section id="code" class="container">
-            <h1>Code</h1>
-            <p>This section will showcase code samples, scripts, and technical solutions developed by Alejandro Lopez. Stay tuned for updates!</p>
+        <h1>Code Portfolio</h1>
+        <section id="code" class="container" style="margin-bottom: 2em;">
+            <div class="project-item" style="background: var(--color-card-bg); border-radius: 12px; box-shadow: var(--box-shadow); padding: 2em 2em 1.5em 2em; align-items: center;">
+                <div style="display: flex; flex-direction: column; width: 100%;">
+  
+                    <div class="project-content">
+                        <p>Check my code work in my <a href="https://github.com/SrAlexStarman" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio-site" class="container" style="margin-bottom: 2em;">
+            <div class="project-item" style="background: var(--color-card-bg); border-radius: 12px; box-shadow: var(--box-shadow); padding: 2em 2em 1.5em 2em; align-items: flex-start;">
+                <div style="display: flex; flex-direction: column; width: 100%;">
+                    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 0.6em;">
+                        <i class="fas fa-globe fa-2x" style="color: var(--color-primary);"></i>
+                        <h2 style="margin: 0;">Personal Portfolio Website</h2>
+                    </div>
+                    <div class="project-content">
+                        <p style="margin-bottom: 1em;">A modern, fully-responsive portfolio site built with plain <strong>HTML, CSS, and vanilla JavaScript</strong>. It showcases this portfolio website with skills, experience, and projects while remaining easy to extend and maintain.</p>
+                        <h3 style="color: var(--color-primary); margin-bottom: 0.5em;">Key Highlights</h3>
+                        <ul style="margin-bottom: 0.5em; padding-left: 2em;">
+                            <li><strong>Static & Lightweight</strong> – No frameworks; deploy instantly to GitHub Pages, Netlify, or any static host.</li>
+                            <li><strong>Modular Layout</strong> – <code>header.html</code> and <code>footer.html</code> are injected on every page via <code>include.js</code>, ensuring site-wide consistency.</li>
+                            <li><strong>Responsive Navigation</strong> – Adaptive header with burger menu for mobile; active-link highlighting handled in JS.</li>
+                            <li><strong>Clean Sectioning</strong> – About, Skills, Experience on home; Project cards on projects page; Code samples on this page.</li>
+                            <li><strong>Single-file Styling</strong> – <code>styles.css</code> uses CSS variables, flex/grid, and media queries for a polished look.</li>
+                            <li><strong>Deployment-ready</strong> – Optional <code>CNAME</code> for custom domains; no back-end or build step required.</li>
+                        </ul>
+                        <h3 style="color: var(--color-primary); margin-bottom: 0.5em;">Source</h3>
+                        <p style="margin-bottom: 0.5em;">
+                            <a class="btn" href="https://github.com/SrAlexStarman/portfolioPage" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="databreaker" class="container" style="margin-bottom: 2em;">
+            <div class="project-item" style="background: var(--color-card-bg); border-radius: 12px; box-shadow: var(--box-shadow); padding: 2em 2em 1.5em 2em; align-items: flex-start;">
+                <div style="display: flex; flex-direction: column; width: 100%;">
+                    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 0.6em;">
+                        <i class="fas fa-gamepad fa-2x" style="color: var(--color-primary);"></i>
+                        <h2 style="margin: 0;">DataBreaker (Unity Action-Game Framework)</h2>
+                    </div>
+                    <div class="project-content">
+                        <p style="margin-bottom: 1em;">A modular, third-person action game framework built in <strong>Unity</strong> (<strong>C#</strong>) with a <em>ScriptableObject</em>-driven architecture. Designed for fast-paced traversal and combat, it cleanly separates gameplay concerns into interchangeable systems and data containers—making it easy to extend, test, and iterate.</p>
+                        <h3 style="color: var(--color-primary); margin-bottom: 0.5em;">Key Highlights</h3>
+                        <ul style="margin-bottom: 0.5em; padding-left: 2em;">
+                            <li><strong>Modular Systems</strong> – Checkpoints & respawn flow, combat combos & hit-detection, “Karnage” special modes, and global coordination via a central <code>GameSystemsController</code>.</li>
+                            <li><strong>Player Actions</strong> – Each move (dash, jump, grind, grapple) and attack (light/heavy) is its own <code>ScriptableObject</code>, allowing designers to tweak behaviors without touching code.</li>
+                            <li><strong>Camera Framework</strong> – Multi-mode setup (free, targeted, grind) with a reset system that smoothly repositions behind the player. Abstract base classes make adding new modes straightforward.</li>
+                            <li><strong>Data-Driven Design</strong> – <code>DataContainer_Player</code> and <code>DataContainer_Camera</code> store runtime state, settings, and references—decoupling logic from configuration.</li>
+                            <li><strong>Scalable Architecture</strong> – Clean folder structure (<code>GameSystems/</code>, <code>MainCharacter/Actions/</code>, <code>Controllers/</code>, <code>DataContainers/</code>) and thorough inline documentation support rapid onboarding.</li>
+                        </ul>
+                        <h3 style="color: var(--color-primary); margin-bottom: 0.5em;">Tech Stack & Tools</h3>
+                        <ul style="margin-bottom: 0.5em; padding-left: 2em;">
+                            <li>Unity 2021 LTS · C# 9</li>
+                            <li>ScriptableObjects for behaviour modularity</li>
+                            <li>Built-in Unity UI & Input System</li>
+                            <li>Git for source control</li>
+                        </ul>
+                        <h3 style="color: var(--color-primary); margin-bottom: 0.5em;">Live Demo & Source</h3>
+                        <p style="margin-bottom: 0.5em;">
+                            <a class="btn" href="https://vfs-gdpg.itch.io/data-breaker" target="_blank" rel="noopener noreferrer">Play on itch.io</a>
+                            <span style="margin: 0 8px; color: var(--color-text-light);">|</span>
+                            <a class="btn" href="https://github.com/SrAlexStarman/DataBreakerCode" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer id="footer"></footer>
