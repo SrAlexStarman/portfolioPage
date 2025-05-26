@@ -13,12 +13,19 @@ function setActiveNav() {
   const page = window.location.pathname.split('/').pop();
   const aboutBtns = document.querySelectorAll('#about-btn, #about-btn-mobile');
   const projectsBtns = document.querySelectorAll('#projects-btn, #projects-btn-mobile');
+  const codeBtns = document.querySelectorAll('#code-btn, #code-btn-mobile');
   if (page === 'index.html' || page === '' || page === 'index') {
     aboutBtns.forEach(btn => btn.classList.add('active'));
     projectsBtns.forEach(btn => btn.classList.remove('active'));
+    codeBtns.forEach(btn => btn.classList.remove('active'));
   } else if (page === 'projects.html') {
     aboutBtns.forEach(btn => btn.classList.remove('active'));
     projectsBtns.forEach(btn => btn.classList.add('active'));
+    codeBtns.forEach(btn => btn.classList.remove('active'));
+  } else if (page === 'code.html') {
+    aboutBtns.forEach(btn => btn.classList.remove('active'));
+    projectsBtns.forEach(btn => btn.classList.remove('active'));
+    codeBtns.forEach(btn => btn.classList.add('active'));
   }
 }
 
@@ -55,4 +62,3 @@ includeHTML('header', 'header.html', function() {
   setupMenu();
 });
 includeHTML('footer', 'footer.html');
-

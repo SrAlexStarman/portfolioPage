@@ -11,62 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header with navigation links -->
-    <header>
-    <div class="header-container">
-        <div class="header-content">
-            <img src="images/profile.jpg" alt="Alejandro Lopez - Technical Designer" class="profile-pic" loading="lazy" width="300" height="300">
-            <div class="header-text">
-                <h1>Alejandro Lopez</h1>
-                <h2>Experienced Technical Designer</h2>
-            </div>
-        </div>
-        <div class="header-buttons desktop-tablet-only">
-            <a href="index.html" class="btn" id="about-btn">About Me</a>
-            <a href="projects.html" class="btn" id="projects-btn">Projects</a>
-            <a href="code.html" class="btn active" id="code-btn">Code</a>
-        </div>
-        <div class="burger-menu mobile-only">
-            <button class="burger-icon" onclick="toggleMenu()" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav class="menu-items">
-                <a href="index.html" class="btn" id="about-btn-mobile">About Me</a>
-                <a href="projects.html" class="btn" id="projects-btn-mobile">Projects</a>
-                <a href="code.html" class="btn active" id="code-btn-mobile">Code</a>
-            </nav>
-        </div>
-    </div>
-</header>
+    <header id="header"></header>
     <main class="active">
         <section id="code" class="container">
             <h1>Code</h1>
             <p>This section will showcase code samples, scripts, and technical solutions developed by Alejandro Lopez. Stay tuned for updates!</p>
         </section>
     </main>
-    <footer>
-    <div class="footer-content">
-        <p>&copy; 2025 Alejandro [Your Last Name]. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        </div>
-    </div>
-</footer>
-<script>
-// Script para resaltar el botón activo según la URL
-const path = window.location.pathname.split('/').pop();
-const navLinks = document.querySelectorAll('.header-buttons .btn, .menu-items .btn');
-navLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if ((href === path) || (href === '' && (path === '' || path === 'index.html'))) {
-        link.classList.add('active');
-    } else {
-        link.classList.remove('active');
-    }
-});
-</script>
+    <footer id="footer"></footer>
+    <script src="include.js"></script>
 </body>
 </html>
